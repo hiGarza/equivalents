@@ -1,0 +1,11 @@
+<div class="container">
+<h3>{{title}}</h3>
+
+<div class="row">
+  <div ng-repeat="element in contentList" class="col-md-3">
+        <div class="pdf-thumb-box"> <a href="#!/asset/{{contentType}}/{{element['Id']}}">
+        <div class="pdf-thumb-box-overlay"></div>
+        <img class="img-responsive" ng-src="{{element['Poster']}}"</a>
+        </div>
+</div>
+</div>
