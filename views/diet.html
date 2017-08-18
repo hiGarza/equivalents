@@ -1,11 +1,15 @@
 <div class="container">
-<h3>{{title}}</h3>
-
 <div class="row">
-  <div ng-repeat="element in contentList" class="col-md-3">
-        <div class="pdf-thumb-box"> <a href="#!/asset/{{contentType}}/{{element['Id']}}">
-        <div class="pdf-thumb-box-overlay"></div>
-        <img class="img-responsive" ng-src="{{element['Poster']}}"</a>
-        </div>
+	<div ng-repeat="(i,meal) in mealList" class="col-md-2 btn btn-default" ng-class="{'col-md-offset-1':$first, 'active':i===activeMeal}" ng-click="selectMeal(i)">{{meal["name"]}}</div>
+</div>
+
+<div class="row" ng-repeat="(eq, value) in equivalentList">
+	<div class="input-group col-md-2 col-md-offset-5">
+	  <span class="input-group-addon" id="basic-addon1" style="width: 120px">{{eq}}</span>
+	  <input type="number" class="form-control" ng-model="equivalentList[eq]">
+	</div>	
+</div>
+<div class="row">
+	<button class="btn btn-default col-md-2 col-md-offset-5" ng-click="saveEquivalents()">Save</button>
 </div>
 </div>

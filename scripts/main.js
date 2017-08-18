@@ -6,7 +6,7 @@ eqApp.config(function($routeProvider) {
             templateUrl : 'views/main.html',
             controller  : 'mainController'
         })
-        .when('/diet/:id', {
+        .when('/diet', {
             templateUrl : 'views/diet.html',
             controller  : 'dietController'
         })
